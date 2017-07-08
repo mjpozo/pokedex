@@ -9,6 +9,11 @@ body {
 	padding: 0;
 }
 
+.img-responsive {
+	max-width: 100%;
+	width: 100%;
+}
+
 @font-face {
   font-family: "Flexo";
   src: url("../docs/assets/font/Flexo/Flexo-Light.otf");
@@ -32,5 +37,20 @@ header {
 #btn-search {
 	background: rgb(227, 105, 110);
 	font-weight: 600;
+}
+
+/*----------------------------------contenedor pokemon ------------------------*/
+.mis-pokemon {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.profilePokemon {
+	box-sizing: border-box;
+	width: 20%;
+	margin: 1%;
+	padding: 0 auto;
+	border: 2px solid black;
 }
 
