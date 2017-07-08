@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
 	$.ajax({
-		url: 'http://pokeapi.co/api/v2/pokemon/', //json que contiene al arreglo results
+		url: 'https://pokeapi.co/api/v2/pokemon/', //json que contiene al arreglo results
 		type: 'GET',
 		datatype: 'json',
 		data: {
