@@ -43,21 +43,10 @@ $(document).ready(function(){
 			//funcion para las imagenes
 			var imgPokemon = function(miData){
 				var idPokemon = miData.id;
-				//console.log("id: " + idPokemon);
 
-				//las fotos las podemos encontrar en formato http://pokeapi.co/media/img/'id'.png, por tanto
-				//var photoPokemon = $('<img src="http://pokeapi.co/media/img/' + idPokemon + '.png" id="img' + i.toString() + '"></img>');
-
-				//var large = tipoPokemon.length;
-				/*for (i=1 ; i<=large ; i++){
-					$(".mis-pokemon").append('<div class="profilePokemon" id="number' + i.toString() + '"></div>');
-					$(".profilePokemon").append("#img" + i.toString()).append('<p class="nombre">' + namePokemon + '</p>');
-				}*/
-
-				//var photoPokemon = $('<img src="http://pokeapi.co/media/img/' + idPokemon + '.png" id="number' + idPokemon + '"></img>');
 				$(".mis-pokemon").append('<div class="cajitaPokemon" id="cajita' + idPokemon.toString() + '"></div>');
 				$("#cajita" + idPokemon.toString()).append('<a class="profilePokemon" id="profile' + idPokemon.toString() + '"></a>');
-				$("#profile" + idPokemon.toString()).append('<img src="http://pokeapi.co/media/img/' + idPokemon + '.png" class="img-responsive" id="number' + idPokemon + '"></img>').append('<p class="nombre center-align">' + namePokemon + '</p>');
+				$("#profile" + idPokemon.toString()).append('<img src="https://pokeapi.co/media/img/' + idPokemon + '.png" class="img-responsive" id="number' + idPokemon + '"></img>').append('<p class="nombre center-align">' + namePokemon + '</p>');
 
 				//será los div contenedores de la imagen y nombre del pokemon donde se activara el modal
 				$("#profile" + idPokemon.toString()).attr("href","#modal" + idPokemon.toString());
@@ -68,7 +57,7 @@ $(document).ready(function(){
 				//se divide en columnas el interior de los modales
 				$("#modal-content-" + idPokemon.toString()).append('<div class="col m5" id="img-modal-' + idPokemon.toString() + '"></div>').append('<div class="col m7" id="info-modal-' + idPokemon.toString() + '"></div>');
 				//se agrega imagen al modal
-				$("#img-modal-" + idPokemon.toString()).append('<img src="http://pokeapi.co/media/img/' + idPokemon + '.png" class="img-responsive"></img>');
+				$("#img-modal-" + idPokemon.toString()).append('<img src="https://pokeapi.co/media/img/' + idPokemon + '.png" class="img-responsive"></img>');
 				//se agrega info (nombre, descripcion, etc)
 				$("#info-modal-" + idPokemon.toString()).append('<p class="nombre center-align">' + namePokemon + '</p>');
 				//se agrega el boton "cerrar" al footer del modal
