@@ -55,14 +55,15 @@ $(document).ready(function(){
 				}*/
 
 				//var photoPokemon = $('<img src="http://pokeapi.co/media/img/' + idPokemon + '.png" id="number' + idPokemon + '"></img>');
-				$(".mis-pokemon").append('<div class="profilePokemon" id="profile' + idPokemon.toString() + '"></div>');
+				$(".mis-pokemon").append('<div class="cajitaPokemon" id="cajita' + idPokemon.toString() + '"></div>');
+				$("#cajita" + idPokemon.toString()).append('<a class="profilePokemon" id="profile' + idPokemon.toString() + '"></a>');
 				$("#profile" + idPokemon.toString()).append('<img src="http://pokeapi.co/media/img/' + idPokemon + '.png" class="img-responsive" id="number' + idPokemon + '"></img>').append('<p class="nombre center-align">' + namePokemon + '</p>');
 
 				//será los div contenedores de la imagen y nombre del pokemon donde se activara el modal
 				$("#profile" + idPokemon.toString()).attr("href","#modal" + idPokemon.toString());
 
 				//modal
-				$(".mis-pokemon").append('<div id="modal' + idPokemon.toString() + '" class="modal modal-fixed-footer"></div>')
+				$("#cajita" + idPokemon.toString()).append('<div id="modal' + idPokemon.toString() + '" class="modal modal-fixed-footer"></div>');
 				$("#modal" + idPokemon.toString()).append('<div class="modal-content" id="modal-content-' + idPokemon.toString() + '"></div>').append('<div class="modal-footer" id="modal-footer-' + idPokemon.toString() + '"></div>');
 				//se divide en columnas el interior de los modales
 				$("#modal-content-" + idPokemon.toString()).append('<div class="col m5" id="img-modal-' + idPokemon.toString() + '"></div>').append('<div class="col m7" id="info-modal-' + idPokemon.toString() + '"></div>');
