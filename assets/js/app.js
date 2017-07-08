@@ -62,7 +62,8 @@ $(document).ready(function(){
 				$("#profile" + idPokemon.toString()).attr("href","#modal" + idPokemon.toString());
 
 				//modal
-				$(".mis-pokemon").append('<div id="modal' + idPokemon.toString() + '" class="modal modal-fixed-footer"></div>').append('<div class="modal-content" id="modal-content-' + idPokemon.toString() + '"></div>').append('<div class="modal-footer" id="modal-footer-' + idPokemon.toString() + '"></div>');
+				$(".mis-pokemon").append('<div id="modal' + idPokemon.toString() + '" class="modal modal-fixed-footer"></div>')
+				$("#modal" + idPokemon.toString()).append('<div class="modal-content" id="modal-content-' + idPokemon.toString() + '"></div>').append('<div class="modal-footer" id="modal-footer-' + idPokemon.toString() + '"></div>');
 				//se divide en columnas el interior de los modales
 				$("#modal-content-" + idPokemon.toString()).append('<div class="col m5" id="img-modal-' + idPokemon.toString() + '"></div>').append('<div class="col m7" id="info-modal-' + idPokemon.toString() + '"></div>');
 				//se agrega imagen al modal
@@ -71,6 +72,9 @@ $(document).ready(function(){
 				$("#info-modal-" + idPokemon.toString()).append('<p class="nombre center-align">' + namePokemon + '</p>');
 				//se agrega el boton "cerrar" al footer del modal
 				$("#modal-footer-" + idPokemon.toString()).append('<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" id="btn-' + idPokemon.toString() + '">Cerrar</a>');
+
+				//activacion modal
+				$(".modal").modal();
 			}
 		});
 	}

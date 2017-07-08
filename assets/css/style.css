@@ -52,5 +52,6 @@ header {
 	margin: 1%;
 	padding: 0 auto;
 	border: 2px solid black;
+	cursor: pointer;
 }
 
